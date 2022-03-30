@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node dist-webpack/bundle.js",
-    "start-ts": "nodemon src/index.ts",
+    "dev": "nodemon src/index.ts",
     "watch": "tsc -w",
     "webpack": "webpack --config webpack.config.js"
   },
