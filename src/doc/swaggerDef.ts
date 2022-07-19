@@ -8,7 +8,10 @@ export const swaggerDefinition = {
     },
     servers: [
         {
-            url: process.env.URL || `http://${HOST}:${PORT}/`,
+            url: process.env.URL || `http://${HOST}:${PORT}/doc-api`,
+        },
+        {
+            url: process.env.URL || `http://${HOST}:${PORT}/doc-api/v2`,
         },
     ],
 };
