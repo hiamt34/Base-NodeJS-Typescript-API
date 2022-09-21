@@ -112,7 +112,8 @@ components:
             message: Bad Request!
 
   securitySchemes:
-    bearerAuth:
+    accessToken:
       type: http
       scheme: bearer
       bearerFormat: JWT
+      in: header

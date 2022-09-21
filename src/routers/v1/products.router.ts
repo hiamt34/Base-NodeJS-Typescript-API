@@ -1,13 +1,13 @@
 import { Express, Router } from "express";
-import { createProductSchema, destroyAndGetDeatailProductSchema, updateProductSchema } from "../schemas";
-import { catchAsync } from "../utils/handleError";
-import { productsControler } from "../controllers";
-import { validate } from "../middleware/validate";
+import { createProductSchema, destroyAndGetDeatailProductSchema, updateProductSchema } from "../../schemas";
+import { catchAsync } from "../../utils/handleError";
+import { productsControler } from "../../controllers";
+import { validate } from "../../middleware/validate";
 
 const router = Router()
 
 const productsRouter = (app: Express) => {
-    app.use('/products', router)
+    app.use('/v1/products', router)
 
     router.get('/', catchAsync(productsControler.reads))
 
